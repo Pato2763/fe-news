@@ -18,3 +18,23 @@
   max-height: 60%;
   padding: 1rem;
 }
+
+.main-article-container {
+  text-align: center;
+}
+
+.article-container {
+  border: solid;
+  max-width: 80%;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 1rem 1rem 1rem rgb(160, 158, 158);
+}
+
+.larger-image {
+  max-width: 80%;
+  max-height: 70%;
+  margin-top: 5%;
+}
