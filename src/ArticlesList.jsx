@@ -17,7 +17,7 @@ const ArticlesList = () => {
     <main className="article-list">
       {!isLoading ? (
         articles.map((article) => {
-          return <ArticleCard article={article} />;
+          return <ArticleCard key={article.article_id} article={article} />;
         })
       ) : (
         <p>Loading...</p>
