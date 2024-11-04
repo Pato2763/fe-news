@@ -1,0 +1,20 @@
+.article-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article-card {
+  border: solid;
+  width: 18rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: 1rem 1rem 1rem rgb(160, 158, 158);
+}
+.article-img {
+  max-width: 60%;
+  max-height: 60%;
+  padding: 1rem;
+}

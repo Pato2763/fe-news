@@ -1,9 +1,14 @@
-import { useState } from "react";
-
 import "./App.css";
+import Home from "./Home";
+import Header from "./Header";
 
 function App() {
-  return <h1>Northcoders news</h1>;
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 }
 
 export default App;
