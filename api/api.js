@@ -22,3 +22,10 @@ export const getCommentsByArticleId = (id) => {
     return response.data.comments;
   });
 };
+
+export const updateVotes = (id, body) => {
+  return api.patch(`/articles/${id}`, body).then((response) => {
+    console.log(response);
+    return response.data;
+  });
+};
