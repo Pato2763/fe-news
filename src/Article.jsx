@@ -7,6 +7,7 @@ import {
 import { useParams } from "react-router-dom";
 import { dateFormatter } from "../utils";
 import CommentCard from "./CommentCard";
+import CommentAdder from "./AddComment";
 
 const Article = () => {
   const [article, setArticle] = useState("");
@@ -30,7 +31,6 @@ const Article = () => {
 
   const updateVotesOptamistic = (vote_increment) => {
     const articleCopy = { ...article };
-    console.log(articleCopy);
     articleCopy.votes = articleCopy.votes += vote_increment;
     setArticle(articleCopy);
   };
@@ -115,6 +115,11 @@ const Article = () => {
           );
         })}
       </section>
+      <CommentAdder
+        article_id={article.article_id}
+        comments={comments}
+        setComments={setComments}
+      />
     </main>
   );
 };

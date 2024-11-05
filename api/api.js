@@ -25,7 +25,14 @@ export const getCommentsByArticleId = (id) => {
 
 export const updateVotes = (id, body) => {
   return api.patch(`/articles/${id}`, body).then((response) => {
-    console.log(response);
     return response.data;
   });
+};
+
+export const postComment = (id, body) => {
+  return api
+    .post(`articles/${id}/comments`, { username: "grumpy19", body: body })
+    .then((response) => {
+      return response.data;
+    });
 };
