@@ -38,3 +38,9 @@
   max-height: 70%;
   margin-top: 5%;
 }
+
+.comment {
+  max-width: 90%;
+  border: solid;
+  margin-top: 1rem;
+}
