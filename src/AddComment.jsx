@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { postComment } from "../api/api";
+import { UserContext } from "./Contexts/User";
 
 const CommentAdder = ({ article_id, comments, setComments }) => {
   const [body, setBody] = useState("");
   const [posting, setPosting] = useState(false);
   const [commentChecker, setCommentChecker] = useState(false);
 
+  const { user } = useContext(UserContext);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (body.length !== 0) {
       setCommentChecker(false);
       setPosting(true);
-      postComment(article_id, body).then((data) => {
+      postComment(article_id, body, user).then((data) => {
         const commentsCopy = comments.map((comment) => {
           return { ...comment };
         });

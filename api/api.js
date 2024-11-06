@@ -1,4 +1,6 @@
 import axios from "axios";
+import { useContext } from "react";
+import { UserContext } from "../src/Contexts/User";
 
 const api = axios.create({
   baseURL: "https://be-nc-news-5a06.onrender.com/api/",
@@ -29,10 +31,17 @@ export const updateVotes = (id, body) => {
   });
 };
 
-export const postComment = (id, body) => {
+export const postComment = (id, body, user) => {
   return api
-    .post(`articles/${id}/comments`, { username: "grumpy19", body: body })
+    .post(`articles/${id}/comments`, { username: user, body: body })
     .then((response) => {
       return response.data;
     });
+};
+
+export const deleteComment = (id) => {
+  const path = `/comments/${id}`;
+  return api.delete(path).then((response) => {
+    return response.status;
+  });
 };
