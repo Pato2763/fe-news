@@ -7,8 +7,8 @@ const api = axios.create({
   headers: "Access-Control-Allow-Origin",
 });
 
-export const getArticles = () => {
-  return api.get("articles").then((response) => {
+export const getArticles = (topic) => {
+  return api.get("articles", { params: { topic: topic } }).then((response) => {
     return response.data.articles;
   });
 };
@@ -45,3 +45,8 @@ export const deleteComment = (id) => {
     return response.status;
   });
 };
+
+export const getTopics = () =>
+  api.get("topics").then((res) => {
+    return res.data;
+  });
