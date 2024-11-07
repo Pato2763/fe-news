@@ -7,10 +7,14 @@ const api = axios.create({
   headers: "Access-Control-Allow-Origin",
 });
 
-export const getArticles = (topic) => {
-  return api.get("articles", { params: { topic: topic } }).then((response) => {
-    return response.data.articles;
-  });
+export const getArticles = (topic, sort_by, order) => {
+  return api
+    .get("articles", {
+      params: { topic: topic, sort_by: sort_by, order: order },
+    })
+    .then((response) => {
+      return response.data.articles;
+    });
 };
 
 export const getArticleById = (id) => {

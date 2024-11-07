@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import ArticlesList from "./ArticlesList";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const TopicPage = () => {
   const { topic } = useParams();
