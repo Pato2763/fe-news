@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import ArticlesList from "./ArticlesList";
 import { useParams, useSearchParams } from "react-router-dom";
 
