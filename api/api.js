@@ -10,7 +10,11 @@ const api = axios.create({
 export const getArticles = (topic, sort_by, order) => {
   return api
     .get("articles", {
-      params: { topic: topic, sort_by: sort_by, order: order },
+      params: {
+        topic: topic,
+        sort_by: sort_by ? sort_by : "votes",
+        order: order,
+      },
     })
     .then((response) => {
       return response.data.articles;

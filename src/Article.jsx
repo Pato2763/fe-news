@@ -44,23 +44,25 @@ const Article = () => {
       ) : errorMsg.length ? (
         <ErrorPage msg={errorMsg} />
       ) : (
-        <ArticleContainer article={article} setArticle={setArticle} />
-      )}
-      <section className="comments">
-        {comments.map((commentElement) => {
-          return (
-            <CommentCard
-              key={commentElement.comment_id}
-              comment={commentElement}
+        <>
+          <ArticleContainer article={article} setArticle={setArticle} />
+          <section className="comments">
+            <CommentAdder
+              article_id={article.article_id}
+              comments={comments}
+              setComments={setComments}
             />
-          );
-        })}
-      </section>
-      <CommentAdder
-        article_id={article.article_id}
-        comments={comments}
-        setComments={setComments}
-      />
+            {comments.map((commentElement) => {
+              return (
+                <CommentCard
+                  key={commentElement.comment_id}
+                  comment={commentElement}
+                />
+              );
+            })}
+          </section>
+        </>
+      )}
     </main>
   );
 };

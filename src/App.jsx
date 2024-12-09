@@ -8,7 +8,7 @@ import ErrorPage from "./ErrorPage";
 
 function App() {
   return (
-    <>
+    <div className="pages-container">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="/articles/:topic" element={<TopicPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

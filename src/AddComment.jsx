@@ -41,7 +41,7 @@ const CommentAdder = ({ article_id, comments, setComments }) => {
           <form onSubmit={handleSubmit}>
             <label>
               New Comment
-              <input value={body} onChange={handleChange} />
+              <textarea value={body} onChange={handleChange}></textarea>
             </label>
             <button type="submit">Post Comment</button>
           </form>

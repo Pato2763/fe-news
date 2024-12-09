@@ -1,3 +1,14 @@
+.pages-container {
+  background-color: #eff1f0;
+  color: #44386a;
+  font-family: "Trebuchet MS", sans-serif;
+}
+.sorters-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
 .article-list {
   display: flex;
   flex-direction: row;
@@ -6,13 +17,13 @@
 }
 
 .article-card {
-  border: solid;
   width: 18rem;
   text-align: center;
   border-radius: 0.5rem;
   margin: 1rem;
-  box-shadow: 1rem 1rem 1rem rgb(160, 158, 158);
+  background-color: #eff1f0;
 }
+
 .article-img {
   max-width: 60%;
   max-height: 60%;
@@ -30,7 +41,6 @@
   border-radius: 0.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  box-shadow: 1rem 1rem 1rem rgb(160, 158, 158);
 }
 
 .larger-image {
@@ -54,6 +64,7 @@
   color: black;
 }
 
-.nav-item {
-  margin: 2rem;
+a {
+  color: black;
+  text-decoration-line: none;
 }

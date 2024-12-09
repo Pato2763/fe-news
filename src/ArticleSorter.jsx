@@ -31,7 +31,7 @@ const ArticleSorter = () => {
   }, [queryStr]);
 
   return (
-    <>
+    <div className="sorters-container">
       <label>
         Sort By
         <select onChange={handleSortByChange}>
@@ -48,7 +48,7 @@ const ArticleSorter = () => {
           <option value="asc">Ascending</option>
         </select>
       </label>
-    </>
+    </div>
   );
 };
 
